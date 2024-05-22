@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" a href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+        <img src="logo.png" alt="logo" id="logo">
+    </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-form">
+            <h1>Welcome to Online Bus Booking</h1>
+      <p>Book your bus tickets easily and conveniently.</p>
+            <h1>Book Your Bus Ticket</h1>
+            <form id="bookingForm" action="routes.html" method="get">
+                <label for="origin">Source:</label>
+                <input type="text" id="origin" name="origin" placeholder="from" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="to" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="passengers">Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="features">
+            <h2>Features</h2>
+            <ul>
+              <li>Easy online booking</li>
+              <li>Secure payment options</li>
+              <li>Wide range of bus operators</li>
+              <li>24/7 customer support</li>
+            </ul>
+          </section>
+    </main>
+   
+
+
+<footer>
+    <p>&copy;2024 online Bus Booking System. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

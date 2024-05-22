@@ -1,0 +1,81 @@
+
+.about-hero {
+    background-image: url(jamaica.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px 10px;
+    text-align: center;
+    color:black;
+}
+
+.about-hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.about-text {
+    flex: 1 1 50%;
+    max-width: 600px;
+    padding-right: 20px;
+    font-size: larger;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.about-mission,
+.about-values {
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.about-values ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about-values li {
+    max-width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+    color: burlywood;
+    border-radius: 5px;
+}
+
+.about-values h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}

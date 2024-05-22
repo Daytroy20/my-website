@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Routes - Online Bus Booking</title>
+    <link rel="stylesheet" href="routes.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Bus Booking</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="routes">
+            <div class="container">
+                <h2>Available Bus Routes Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Route ID</th>
+                            <th>Origin</th>
+                            <th>Destination</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>kenol</td>
+                            <td>nairobi</td>
+                            <td>08:00 AM</td>
+                            <td>11:00 AM</td>
+                            <td>3h</td>
+                            <td>sh 20</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>nakuru</td>
+                            <td>kisii </td>
+                            <td>09:00 AM</td>
+                            <td>12:30 PM</td>
+                            <td>3h 30m</td>
+                            <td>sh 250</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>makuyu</td>
+                            <td>kamahuha</td>
+                            <td>06:00 AM</td>
+                            <td>08:00 AM</td>
+                            <td>2H</td>
+                            <td>sh 150</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>thika</td>
+                            <td>karatina</td>
+                            <td>07:00 AM</td>
+                            <td>12:00 PM</td>
+                            <td>5h</td>
+                            <td>sh 500</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>nyeri</td>
+                            <td>machakos</td>
+                            <td>04:00 PM</td>
+                            <td>10:00 PM</td>
+                            <td>6h</td>
+                            <td>sh 600</td>
+                        </tr>
+                        <!-- Add more routes as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Bus Booking. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // Function to get query parameters from URL
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            origin: params.get('origin'),
+            destination: params.get('destination')
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchParams = getQueryParams();
+        filterRoutes(searchParams.origin, searchParams.destination);
+    });
+
+    function filterRoutes(origin, destination) {
+        const routes = [
+            { id: 1, origin: 'kenol', destination: 'nairobi', departureTime: '08:00 AM', arrivalTime: '11:00 AM', duration: '3h', price: 'sh 20' },
+            { id: 2, origin: 'nakuru', destination: 'kisii', departureTime: '09:00 AM', arrivalTime: '12:30 PM', duration: '3h 30m', price: 'sh 250' },
+            { id: 3, origin: 'makuyu', destination: 'kamahuha', departureTime: '06:00 AM', arrivalTime: '08:00 AM', duration: '2h', price: 'sh 150' },
+            { id: 4, origin: 'thika', destination: 'karatina', departureTime: '07:00 AM', arrivalTime: '12:00 PM', duration: '5h', price: 'sh 500' },
+            { id: 5, origin: 'nyeri', destination: 'machakos', departureTime: '04:00 PM', arrivalTime: '10:00 PM', duration: '6h', price: 'sh 600' }
+            // Add more routes as needed
+        ];
+
+        const filteredRoutes = routes.filter(route => {
+            return route.origin.toLowerCase().includes(origin.toLowerCase()) &&
+                   route.destination.toLowerCase().includes(destination.toLowerCase());
+        });
+
+        populateRoutesTable(filteredRoutes);
+    }
+
+    function populateRoutesTable(routes) {
+        const tableBody = document.querySelector('table tbody');
+        tableBody.innerHTML = ''; // Clear existing rows
+
+        routes.forEach(route => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${route.id}</td>
+                <td>${route.origin}</td>
+                <td>${route.destination}</td>
+                <td>${route.departureTime}</td>
+                <td>${route.arrivalTime}</td>
+                <td>${route.duration}</td>
+                <td>${route.price}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+    </script>
+</body>
+</html>

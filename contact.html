@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Bus Booking</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+  <main>
+    <section class="hero">
+      <h1>We’re Here to Help!</h1>
+      <p>Contact us for any queries or support. Our team is available 24/7.</p>
+    </section>
+
+    <section class="contact-form">
+      <form action="submit_form.php" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+       
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+       
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+       
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+       
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+       
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="contact-info">
+      <div class="info-item">
+        <i class="icon-location"></i>
+        <p>1234 Bus Lane, City, State, ZIP Code</p>
+      </div>
+      <div class="info-item">
+        <i class="icon-phone"></i>
+        <p>+254 (200) 956-960</p>
+      </div>
+      <div class="info-item">
+        <i class="icon-email"></i>
+        <p>support@busbooking.com</p>
+      </div>
+      <div class="info-item">
+        <i class="icon-hours"></i>
+        <p>24/7 Support Available</p>
+      </div>
+    </section>
+
+    <div class="live-chat">
+      <button>Chat with Us</button>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="social-media">
+      <a href="https://facebook.com" class="icon-facebook">Facebook</a>
+      <a href="https://twitter.com" class="icon-twitter">Twitter</a>
+      <a href="https://instagram.com" class="icon-instagram">Instagram</a>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p>© 2024 Bus Booking Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
