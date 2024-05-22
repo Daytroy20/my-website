@@ -2,109 +2,160 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
+}
 
-  .hero {
+.hero {
     background-color: #333;
     background-size: cover;
     padding: 100px 20px;
     text-align: center;
     color: #fff;
-  }
-  
-  .hero h1 {
+}
+
+.hero h1 {
     margin: 0;
     font-size: 36px;
-  }
-  
-  .hero p {
+}
+
+.hero p {
     margin: 10px 0 0;
     font-size: 18px;
-  }
-  
-  .contact-form {
+}
+
+.contact-form {
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .contact-form form {
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     margin-top: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
     padding: 10px;
     margin-top: 5px;
     font-size: 16px;
-  }
-  
-  .contact-form button {
+}
+
+.contact-form button {
     padding: 10px;
     background-color: #333;
     color: #fff;
     border: none;
     margin-top: 20px;
     cursor: pointer;
-  }
-  
-  .contact-info {
+}
+
+.contact-info {
     background-color: #f4f4f4;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  .contact-info .info-item {
+}
+
+.contact-info .info-item {
     text-align: center;
     margin: 10px;
-  }
-  
-  .contact-info .info-item i {
+    flex: 1 1 200px; /* Ensures that each info item takes up at least 200px of width */
+}
+
+.contact-info .info-item i {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .live-chat {
+}
+
+.live-chat {
     text-align: center;
     margin: 20px;
-  }
-  
-  .live-chat button {
+}
+
+.live-chat button {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
-  }
-  
-  
-  footer {
+}
+
+footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
-  
-  footer .social-media a {
+}
+
+footer .social-media a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-  }
-  
-  footer .footer-links a {
+}
+
+footer .footer-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 10px 0 0;
-  }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 14px;
+    }
+
+    .live-chat button {
+        padding: 8px 16px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer .social-media a,
+    footer .footer-links a {
+        margin: 0 5px;
+    }
+}
