@@ -25,10 +25,11 @@
             align-items: center;
             flex-wrap: wrap;
         }
-            img {
-                        width:auto;
-                        height:auto;
-            }
+            .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
         
         nav ul {
             list-style-type: none;
