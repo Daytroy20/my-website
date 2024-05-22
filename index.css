@@ -1,156 +1,169 @@
- * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(faq.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: antiquewhite;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(faq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+}
 
-        header {
-            background-color: hsl(0, 73%, 6%);
-            color: #fff;
-            padding: 10px;
-        }
+header {
+    background-color: hsl(0, 73%, 6%);
+    color: #fff;
+    padding: 10px;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-            .logo img {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
     max-width: 100%;
     height: auto;
 }
 
-        
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-        }
-        
-        nav ul li {
-            margin-right: 20px;
-        }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+.logo {
+    flex: 1;
+}
 
-        section {
-            margin-bottom: 20px;
-        }
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    flex: 3;
+    justify-content: flex-end;
+}
 
-        .search-form {
-            background-color: none;
-            padding: 40px;
-            border-radius: 5px;
-            max-width: 600px;
-            margin: auto;
-        }
+nav ul li {
+    margin-right: 20px;
+}
 
-        .search-form h1 {
-            margin-bottom: 1rem;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 
-        .search-form form {
-            display: grid;
-            grid-gap: 1rem;
-        }
+section {
+    margin-bottom: 20px;
+}
 
-        .search-form input,
-        .search-form button {
-            padding: 20px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-        }
+.search-form {
+    background-color: none;
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto;
+}
 
-        .search-form button {
-            background-color: #13c590;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 25px;
-        }
+.search-form h1 {
+    margin-bottom: 1rem;
+}
 
-        .features {
-            padding: 40px;
-            text-align: center;
-        }
+.search-form form {
+    display: grid;
+    grid-gap: 1rem;
+}
 
-        @keyframes tiltText {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            50% { transform: rotate(0deg); }
-            75% { transform: rotate(5deg); }
-            100% { transform: rotate(0deg); }
-        }
+.search-form input,
+.search-form button {
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
 
-        .features h2 {
-            font-size: 36px;
-            color: purple;
-            margin-bottom: 20px;
-            animation: tiltText 2s infinite;
-        }
+.search-form button {
+    background-color: #13c590;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+}
 
-        .features ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+.features {
+    padding: 40px;
+    text-align: center;
+}
 
-        .features li {
-            margin-bottom: 10px;
-        }
+@keyframes tiltText {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
+.features h2 {
+    font-size: 36px;
+    color: purple;
+    margin-bottom: 20px;
+    animation: tiltText 2s infinite;
+}
 
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+.features ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
+.features li {
+    margin-bottom: 10px;
+}
 
-            nav ul li {
-                width: 100%;
-                text-align: center;
-                margin: 10px 0;
-            }
-        }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
-        @media (max-width: 480px) {
-            .search-form {
-                padding: 20px;
-            }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-            .search-form input,
-            .search-form button {
-                padding: 10px;
-            }
+    .logo {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-            .search-form h1 {
-                font-size: 24px;
-            }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
 
-            .features h2 {
-                font-size: 28px;
-            }
-        }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-form {
+        padding: 20px;
+    }
+
+    .search-form input,
+    .search-form button {
+        padding: 10px;
+    }
+
+    .search-form h1 {
+        font-size: 24px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+}
